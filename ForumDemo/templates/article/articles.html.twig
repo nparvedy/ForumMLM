@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../article/css/articles.css">
+{% endblock %}
+
+{% block body %}
+<div id="cuadroGrande">
+    
+        <div id="cortina">
+           <div id="cuadrito"></div>
+           <div id="cuadrito1"></div>
+    
+        </div>
+        <section>
+            {% for article in articles %}
+                <a href="{{ path('article_show', {'id_subsection': article.subsection.id, 'id_article': article.id}) }}">
+
+                
+                <div class="post_it">
+                    <h1>{{ article.name }}</h1>
+                    <p>{{ article.resume }}</p>
+                    <p>Créer par {{ article.user.username }} </p>
+                    <p>, le {{ article.createdAt | date('d/m/Y')}}</p>
+                    
+                </div>
+                </a>
+            {% endfor %}
+            {{ knp_pagination_render(articles) }}
+
+            
+        </section>
+        
+        
+</div>
+<div id="ar">
+    <a id="nv" href="{{ path('forum_create', {'id_subsection' : id_subsection}) }}">Nouvel article</a>
+</div>
+
+{% endblock %}

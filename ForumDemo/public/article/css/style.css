@@ -1,0 +1,202 @@
+*{
+    margin:0;
+}
+
+@font-face {
+    font-family: 'Rubrik';
+    src: url("/article/police/RubrikOT/RubrikRegular.otf");
+  }
+
+h1,h2,h3,p, label, input,li {
+    font-family: 'Rubrik';
+}
+
+header {
+    display:flex;
+    background-color: #d8d2d23b;
+    border-bottom:1px solid black;
+    height:115px;
+    margin-bottom:70px;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header ul#header_left{
+    width:57%;
+    position:relative;
+}
+
+header ul#header_left img{
+    position:absolute;
+    height: 112px;
+    width: 226px;
+    top:25px;
+}
+
+header ul#header_right{
+    display:flex;
+    align-items:center;
+    width:40%;
+    justify-content:flex-end;
+    margin-right: 3%;
+}
+
+header ul#header_right li {
+    background-color: #68bff169;
+    width:90px;
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    margin-right:15px;
+}
+
+header ul#header_right li img{
+    width:40px;
+
+}
+
+header ul#header_right li:hover{
+    background-color:#3d91dba1;
+}
+
+footer{
+    display:flex;
+    height:538px;
+    background-color:#3D3D3D;
+    justify-content:space-around;
+    align-items:center;
+    border-top:10px solid #0e4e96;
+    margin-top:100px;
+}
+
+footer h2{
+    color : rgb(68, 200, 245) !important;
+}
+
+footer a, p {
+    text-decoration: none;
+    color: #acacac;
+}
+
+footer a:hover{
+    color:white;
+}
+
+footer h2{
+    padding-bottom: 30px;
+    font-size:21px;
+}
+
+#container_part{
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
+
+#footer_who, #footer_contact, #footer_newsletter{
+    display:flex;
+    flex-direction:column;
+    height:378px;
+    padding-left:35px;
+}
+
+#footer_who {
+    width:25%;
+    border-right:1px solid #777;
+    padding-right:30px;
+}
+
+#footer_contact{
+    width:20%;
+    border-right:1px solid #777;
+    padding-right:30px;
+}
+
+#footer_contact li{
+    padding-bottom:40px;
+}
+
+#footer_newsletter{
+    width:25%;
+}
+
+#footer_newsletter form {
+    display:flex;
+    flex-direction:column;
+}
+
+#footer_newsletter label{
+    color: #acacac;
+    text-align: center;
+    font-size:25px;
+    padding-bottom:5px;
+}
+
+#footer_newsletter input.text {
+    padding: 12px 20px;
+    border-radius:5px;
+    width:90%;
+}
+
+#footer_newsletter input#suscribe{
+    background-color: #fff!important;
+    border-radius: 20px !important;
+    padding: 10px;
+    border: solid #0D4D87;
+    font-size: 14pt;
+    width: 125px;
+    position: relative;
+    left: 25%;
+    margin-top:20px;
+}
+
+#footer_newsletter input#suscribe:hover{
+    background-color: #0D4D87!important;
+    color:white;
+}
+
+#footer_who ul, #footer_contact ul, #footer_newsletter ul{
+    display:flex;
+    flex-direction: column;
+    padding-inline-start: 0;
+}
+
+#footer_who ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+#footer_who li, #footer_contact ul li, #footer_newsletter ul li {
+    list-style-type: none;
+    margin:0 15px 0 0;
+}
+
+#footer_who img{
+    background-color:white;
+    border-radius: 10px;
+    border:1px solid red;
+}
+
+#footer_who ul li img#logo {
+    width:110px;
+    height:58px;
+}
+
+#footer_who ul li img#logo_pn {
+    width:140px;
+    font-family: 'Rubrik';
+    height:55px;
+}
+
+#footer_who ul li img#logo_simplon {
+    width:59px;
+    height:57px;
+}
+
+
+

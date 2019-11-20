@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/article/css/articles.css">
+{% endblock %}
+
+{% block body %}
+
+<section class="article">
+    <div class="profil">
+        <ul>
+            <li class="avatar"><img src="/article/images/{{ article.user.avatar }}"/></li>
+            <li class="username">{{ article.user.username }}</li>
+            <li class="nb_message">31 message</li>
+        </ul>
+    </div>
+
+    <div class="show_article">
+                
+        <div class="article_title">
+            <h1>{{ article.name }}</h1>
+        </div>
+        <div class="article_content">
+            <p>{{ article.content | nl2br}}</p>
+            
+            <div class="article_date">
+                {% if user.id == article.user.id %}
+                <a href="{{ path('forum_edit', {'id_subsection': article.subsection.id, 'id': article.id}) }}">Edit</a>
+                {% endif %}
+                {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i') }}
+                
+                <a href="{{ path('comment_create', {'id_subsection': article.subsection.id, 'id_article': article.id}) }}">répondre</a>
+            </div>
+        </div>
+                
+                
+    </div>
+      
+</section>
+
+{% for comment in comments %}
+<section class="article">
+        <div class="profil">
+            <ul>
+                <li class="avatar"><img src="/article/images/{{ comment.user.avatar }}"/></li>
+                <li class="username">{{ comment.user.username }}</li>
+                <li class="nb_message">31 message</li>
+            </ul>
+        </div>
+    
+        <div class="show_article">
+                    
+            <div class="article_content">
+                <p>{{ comment.content | nl2br }}</p>
+                
+                <div class="article_date">
+                    {% if user.id == comment.user.id %}
+                        <a href="{{ path('comment_edit', {'id_subsection': article.subsection.id, 'id_article': article.id, 'id': comment.id}) }}">Edit</a>
+                    {% endif %}
+                    {{ comment.createdAt | date('d/m/Y') }} à {{ comment.createdAt | date('H:i') }}
+                    <a href="{{ path('comment_create', {'id_subsection': article.subsection.id, 'id_article': article.id}) }}">répondre</a>
+                </div>
+            </div>
+            
+                    
+        </div>
+          
+</section>
+{% endfor %}
+{{ knp_pagination_render(comments) }}
+
+{% endblock %}

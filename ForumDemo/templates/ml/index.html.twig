@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="tchat_contain">
+        <div id="title_tchat">
+            Tchat
+        </div>
+
+        <div class="block"></div>
+
+        <div id="users_online">
+            <p id="title_users">
+                Utilisateurs connectés<br/>
+            </p>
+            <br/><li class="users"></li>
+        <li class="users"><img class="bouleCo"src="../images/boule.png">{{ username }}</img></li>
+        </div>
+
+        <!-- MESSAGE TCHAT -->
+        <div
+            class="messages"
+            id="test"
+            onscroll="blnScroll=false"
+            onfocus="blnScroll=true"></div>
+
+    </div>
+    <!-- FIN MESSAGE TCHAT -->
+</div>
+<div class="input_contain">
+
+    <form method="POST" action="">
+        <input
+            type="text"
+            class="tchat_input"
+            name="message"
+            id="messageS"
+            placeholder="Ecrire ici..">
+        <input
+            type="submit"
+            name="submit"
+            value="Envoyez votre message !"
+            id="envoi"
+            hidden="hidden">
+    </form>
+</div>
+<main>
+    <div id="countain_forum">
+        {% for section in sections %}
+            <div id="forum">
+                <div id="title">
+                    <table>
+                        <tr>
+                            <th>{{ section.name }}</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <table>
+                    {% for subsection in section.subsections %}
+                    
+                        <tr> 
+                            <td><a class="lienIndex" href="{{ path('test', {'id_subsection': subsection.id}) }}">{{ subsection.name }}</a></td>
+
+                        </tr>
+                        
+                    {% endfor %}
+                </table>
+            </div>
+        {% endfor %}
+
+    </div>
+    {% for article in articles %}
+ <a class="articleLast" href="{{ path('article_show', {'id_subsection': article.subsection.id, 'id_article': article.id}) }}"> 
+        <div id="article_recent">
+           <div id="title_postit">
+                {{ article.name }}
+            </div>
+            <div id="postit">
+                <p>{{ article.content }}</p>
+                <input type="text" id="username"value="{{ username }}">
+                <input type="text" id="idid" value="{{ idUser.id }}" >
+            </div>
+        </div>
+        </a>
+    {% endfor %}
+</main>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getQueryStringValue(key) {
+        return decodeURIComponent(window.location.search.replace(new RegExp(
+            "^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=" +
+                    "([^&]*))?)?.*$",
+            "i"
+        ), "$1"));
+    }
+
+    $('#envoi').click(function (e) {
+        e.preventDefault(); // on empêche le bouton d'envoyer le formulaire
+        // on sécurise les données
+        message = document.getElementById('messageS').value;
+        gets = getQueryStringValue('id');
+        username = document.getElementById('username').value;
+        idUser = document.getElementById('idid').value;
+        console.log(username + idUser + gets +" "+ message);
+        console.log('hallo');
+        if (message != null) { // on vérifie que les variables ne sont pas vides
+           console.log('halssso'); $.ajax({
+    
+                url: "config.php", // on donne l'URL du fichier de traitement
+                type: "POST", // la requête est de type POST
+                data: {
+                    message: (message),
+                    gets: (gets),
+                    username: (username),
+                    idUser: (idUser)
+                }
+            });
+            function scrollTchat() {}
+            $('#messages').append("<p>dit : " + message + "</p>"); // on ajoute le message dans la zone prévue
+            reset = document.getElementById('messageS');
+            reset.value = "";
+
+            setTimeout(function () {
+                test.scrollTop = test.scrollHeight;
+            }, 500);
+        }
+    });
+        function cc() {
+ $('.block')
+.load('tchat.php')
+.fadeIn("slow");
+};
+cc();
+    setInterval(function time() {
+        gets = getQueryStringValue('id');
+        username = document.getElementById('username').value;
+
+        $.ajax({
+            url: "charger.php",
+            method: "GET",
+            data: { //Initilisation des data à passer//
+                id: JSON.stringify(gets),
+                username: (username)
+            },
+            success: function (res) {
+                $('.messages').html(res);
+
+            }
+        })
+    }, 500);
+    var blnScroll = true;
+    test = document.getElementById('test');
+    test.style.overflowY = "scroll";
+    var auto_refresh = setInterval(function cc() {
+        if (blnScroll == true) {
+            test.scrollTop = test.scrollHeight;
+        } else {
+            test.scrollTop = test.scrollTop;
+        }
+    }, 500);
+</script>
+{% endblock %}

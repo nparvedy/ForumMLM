@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello SearchController! {% endblock %}
+
+{% block body %}
+
+     {# pour tests
+     {% if not app.user.username %}
+     <p>User not found</p>
+     {% else %}
+     <p>User : {{app.user.username}}</p>
+     {% endif %}
+     #}
+
+     <div class="resultcontent">
+          {% if articles is defined %}
+          {% if articles | length == 0 %}
+          <div class="searchtitle">
+               <h2>Désolé, aucun résultat pour votre recherche</h2>
+
+          </div>
+          {% else %}
+          <div class="searchtitle">
+               <h2>Resultat de la recherche {{articles | length}}</h2>
+          </div>
+          {% for article in articles %}
+               <div class="sectionrow">
+                    <h3>{{article.name}}</h3>
+
+                    <p>{{article.content}}</p>
+                    <button class="button"><a href="#"><span>Lire la suite </span></a></button>
+               </div>
+               <div class="row">
+                    <div class="">
+                         <h5>Ecrit par {{article.user.username}} le  {{article.createdAt | date('d/m/Y')}} dans la section {{article.subsection.section.name}}</h5>
+                    </div>
+               </div>
+
+          {% endfor %}
+          {% endif %}
+          {% endif %}
+
+     </div>
+
+{% endblock body %}

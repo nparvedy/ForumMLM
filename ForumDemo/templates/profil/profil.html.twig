@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% if message is not empty %}
+     <div class="message-succes">
+          <p>{{message}}</p>
+     </div>
+{% endif %}
+     <h2>Profil utilisateur</h2>
+
+    <div class="profilrow">
+         <div class="colone-40">
+              <h4>{{user.username}}</h4>
+              <img src="{{user.avatar}}" alt="">
+              <button id="upload" type="submit">Changer l'avatar</button>
+              <h5> <span>inscrit depuis :</span> {{user.createdAT |date('d/m/Y')}}</h5>
+              {% if user.candidat == 1 %}
+               <h3>Candidat dans la mission locale marseille</h3>
+               {% endif %}
+  
+  
+     
+         </div>
+         <div class="colone-60">
+
+              <form class="" action="" method="post">
+
+                   <label for="">Pseudo</label>
+                   <input class="inprof" type="text" minlength=6 maxlength=35 name="username" value="{{user.username}}" required>
+
+                   <label for="">Nom</label>
+                   <input class="inprof" type="text" minlength="3" name="lastname" value="{{user.lastname}}" required>
+
+                   <label for="">Prénom</label>
+                   <input  class="inprof" type="text" name="firstname" minlength="3" value="{{user.firstname}}" required>
+                   <label for="">Adresse</label>
+                   <input id="adres" class="inprof" type="text" name="address" value="{{user.address}}"required> <i class="fas fa-pen-square"></i>
+                   <label for="">Code Postal</label>
+                   <input id="cpos" class="inprof" type="tel" name="zipcode" maxlength="5" minlength="5" value="{{user.zipcode}}" required >
+                   <label for="">Téléphone</label>
+                   <input id="tel" class="inprof" type="tel"  maxlength="14" minlenght='14' name="phone" value="{{user.phone}}" required>
+                   <label for="">E-mail</label>
+                   <input id="email" class="inprof" type="email" name="email" value="{{user.email}}" required>
+                   <label for="">Mot de passe</label>
+                   <input id="pass" class="inprof" type="password" name="password" value="{{user.password}}" required>
+
+                   <div class="">
+                        <button class="profiledit" type="submit" name="modifi">Modifier</button>
+                        <button class="canceledit" type="submit" name="annuler">Annuler</button>
+
+                   </div>
+
+              </form>
+
+  
+         </div>
+    </div>
+ {% block javascriptzz %}
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+     $(".active").click(function(){
+          $(".serachbox").toggle();
+
+     });
+
+});
+
+$(document).ready(function(){
+    $('.sendButton').prop('disabled',true);
+    $('#message').keyup(function(){
+        $('.sendButton').prop('disabled', this.value == "" ? true : false);
+    })
+});
+
+
+$(document).ready(function(){
+     $(".inprof").prop('disabled',true);
+     $(".fa-pen-square").click(function(){
+          $(".inprof").prop('disabled', this.value == "" ? true : false);
+          $("#upload").css('visibility','visible');
+          $(".profiledit").css('visibility','visible');
+          $(".canceledit").css('visibility','visible');
+     });
+});
+
+$(".message-succes").fadeIn(1000).delay(5000).fadeOut(1000);
+</script>
+{% endblock %}
+
+{% endblock %}
+
+     

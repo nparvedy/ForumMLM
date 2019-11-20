@@ -1,0 +1,115 @@
+{% extends "base.html.twig" %}
+
+{% block body %}<main>
+    <div id="container_register">
+        <div class="container_register">
+            <form method="post" enctype="multipart/form-data" action="" id="formulaire_register"
+    style="width: 100%;">
+
+                <label for="input_register">Nom d'utilisateur</label>
+                    <input type="text" id="input_register" name="username" placeholder="Nom d'utilisateur">
+                    <hr>
+                    <label for="input_register">Mot de passe</label>
+                    <input type="password" id="input_register" name="password" placeholder="Mot de passe">
+                    <hr>
+                     <label for="input_register">Prénom</label>
+                    <input type="text" id="input_register" name="firstname" placeholder="Prénom">
+                    <hr>
+                     <label for="input_register">Nom de famille</label>
+                    <input type="text" id="input_register" name="lastname" placeholder="Nom de famille">
+                    <hr>
+                     <label for="input_register">Homme ou femme ?</label>
+                    <select name="sex">
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                    </select>
+                    <hr>
+                     <label for="input_register">Adresse mail</label>
+                    <input type="text" id="input_register" name="email" placeholder="Adresse mail"required>
+
+                     <label for="input_register">Adresse de résidence</label>
+                    <input type="text" id="input_register" name="address" placeholder="Adresse de résidence"required>
+                    <hr>
+                     <label for="input_register">Code postal</label>
+                    <input type="text" id="input_register" name="zipcode" placeholder="Code postal" required>
+                    <hr>
+                     <label for="input_register">Mot de passe</label>
+                    <input type="date" id="input_register" max="2050-06-25" min="1900-08-13" name="birthday" required>
+                    <hr>
+                    <label for="input_register">Etes-vous inscrit à la mission local ?</label>
+                    <select name="candidat">
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <hr>
+                    <label for="input_register">Votre numéro de téléphone</label>
+                    <input type="text" id="input_register" name="phone" placeholder="phone">
+                    <hr>
+                    <label for="input_register">Avatar ( Facultatif )</label>
+                    <input type="file" name="avatar" id="input_register">
+                <br />
+                <button type="submit" id="envoyer">M'inscrire</button>
+            </form><br>
+            <button id="button_select_choice" onclick="connexion()">Se connecter</button>
+        </div>
+    </div>
+            <div id="container_co">
+                    <form method="post" action="" style="display:flex;">
+<input type="text" name="usernameco" id="input_login" placeholder="Nom d'utilisateur">
+<input type="password" name="passwordco" id="input_login" placeholder="Mot de passe"><br/>
+<button type="submit" id="envoyer_login">Confirmer</button>
+</form>
+<button id="button_select_choice" onclick="register()">S'inscrire</button>
+        </div>
+        <div id="choice">
+<button id="button_select_choice" onclick="connexion()">Se connecter</button>
+<button id="button_select_choice" onclick="register()">S'inscrire</button>
+</div>
+        {% if confirm %}
+<div id="succes"><p>{{ confirm }}</p></div>
+{% endif %}
+        {% if error %}
+<div id="error"><p>{{ error }}</p></div>
+{% endif %}
+</main>
+
+
+
+
+
+{% endblock %}
+
+  {% block javascripts %}
+  <script type="text/javascript">
+    function connexion() {
+         var connexion = document.getElementById('container_co');
+         var choice = document.getElementById('choice');
+         var register = document.getElementById('container_register');
+
+        register.style.display = "none";
+        connexion.style.display = "block";
+        choice.style.display = "none";
+
+    }
+    
+    function register() {
+        var register = document.getElementById('container_register');
+        var choice = document.getElementById('choice');
+        var connexion = document.getElementById('container_co');
+
+        connexion.style.display = "none";
+        register.style.display = "block";
+        choice.style.display = "none";
+    }
+
+    function timeco() { 
+        var succes = document.getElementById('succes');
+        var error = document.getElementById('error');
+
+        succes.style.display = "none";
+        error.style.display = "none";
+        alert('ok') }
+
+setTimeout(timeco, 5000);
+    </script>
+  {% endblock %}

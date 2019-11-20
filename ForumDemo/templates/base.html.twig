@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/youb.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+                <div id="menu_responsive">
+                <div class="categorie" id="cat">
+                    <a href="/"><li class="li_menu">ACCUEIL</li></a>
+                    <li class="li_menu" >CONTACT</li>
+                    <li class="li_menu">COMPTE</li>
+                    <li class="li_menu" >Recherche</li>
+                    
+                </div>
+            </div>
+       <header>
+        <div id="container">
+        
+            <a href="/"><img height="100" id="logo_website" src="/images/logo.png" alt="logo"
+                    width="200" /></a>
+            <div id="li_container">
+                <a href="/"><li id="home_icon"></li></a>
+                {% if user is defined %}
+                <a href="{{path('profil_show', {'id': user.id})}}"><li id="users_icon"> </li></a>
+                <a  href="{{ path('deconnection')}}"><li id="deco_icon"></li></a>
+                {% endif %}
+                <li class="active" id="search_icon"></li>
+                
+            </div>
+
+                  <div id="li_container_responsive">
+            <div id="container_barre">
+            <li class="barre"></li>
+                <li class="barre"></li>
+                    <li class="barre"></li>
+                        </div>
+            </div>
+    </header>
+    <div class="serachbox">
+                        <form name="myForm" id="recherche" action="{{path('recup')}}" method="post">
+                            <input id="message" type="text" name="recherche" placeholder="Rechercher">
+                            <input class="sendButton" type="submit"  value="valider">
+
+                        </form>
+                </div>
+<div class="container">
+            <div class="flexage" id="flexage">
+     </div>
+        {% block body %}
+       
+        {% endblock %}
+ </div>
+    <!-- Pied de page du Forum -->
+    <footer>
+        <div id="footer_container">
+            <div id="column">
+                <h2>Réalisé par :</h2>
+               <img src="/images/logo_simplon.png" id="logo_simplon">
+            </div>
+
+            <div id="column" style="border-left: 1px solid #f3f3f3;">
+            <h2>Contactez-nous !</h2>
+            <p>Carrières: Postulez!</p>
+            <p>Retrouvez nous sur:</p>
+            <p>Signaler un problème</p>
+            </div>
+        </div>
+    </footer>
+
+
+        {% block javascripts %}
+
+        {% endblock %}
+
+ {% block javascriptzz %}
+    
+{% endblock %}
+
+
+
+{% block js %}
+        <script>
+        //Document GET//
+        bouton = document.getElementById('container_barre');
+        responsive = document.getElementById('menu_responsive');
+        sous_responsive = document.getElementById('cat');
+        flex = document.getElementById('flexage');
+
+        //Initialisation style//
+        responsive.style.width = "100%";
+        responsive.style.height = "0px";
+        responsive.style.transition = "0.6s";
+        flex.style.transition ="0.6s";
+        flex.style.height ="0px";
+
+        //Nav responsive//
+        bouton.addEventListener("click",function() {
+        if (responsive.style.height =="0px") {
+            responsive.style.height = "280px";
+            flex.style.transition ="0.6s";
+            flex.style.height ="280px";
+        }
+            else {
+                flex.style.transition ="0.6s";
+                flex.style.height ="0px";
+                responsive.style.height = "0";
+            }
+        });
+
+        </script>
+        
+        {% endblock %}
+    </body>
+</html>
+<script src="../app.js"></script>
+
+<style>
+</style>
