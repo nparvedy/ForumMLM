@@ -94,7 +94,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
     <div class=\"row\">
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-info mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de l'utilisateurs </div>
+                <div class=\"card-header cardName\">Statistique de l'utilisateurs </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/usersA.jpg\">
                     <h6 class=\"card-text quie\">Utilisateurs</h6>
@@ -109,7 +109,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-warning mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de l'articles </div>
+                <div class=\"card-header cardName\">Statistique de l'articles </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/articlesA.png\">
                     <h6 class=\"card-text quie\">Articles</h6>
@@ -124,7 +124,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-success mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les catégories </div>
+                <div class=\"card-header cardName\">Statistique des catégories </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/categoriesA.jpg\">
                     <h6 class=\"card-text quie\">Catégories</h6>
@@ -139,7 +139,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div> 
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les commentaires </div>
+                <div class=\"card-header cardName\">Statistique des commentaires </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/commentsA.jpg\">
                     <h6 class=\"card-text quie\">Commentaires</h6>
@@ -152,7 +152,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>    
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-danger mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les messages </div>
+                <div class=\"card-header cardName\">Statistique des messages </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/messagesA.png\">
                     <h6 class=\"card-text quie\">Messages</h6>
@@ -206,7 +206,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
     <div class=\"row\">
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-info mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de l'utilisateurs </div>
+                <div class=\"card-header cardName\">Statistique de l'utilisateurs </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/usersA.jpg\">
                     <h6 class=\"card-text quie\">Utilisateurs</h6>
@@ -216,7 +216,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-warning mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de l'articles </div>
+                <div class=\"card-header cardName\">Statistique de l'articles </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/articlesA.png\">
                     <h6 class=\"card-text quie\">Articles</h6>
@@ -226,7 +226,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-success mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les catégories </div>
+                <div class=\"card-header cardName\">Statistique des catégories </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/categoriesA.jpg\">
                     <h6 class=\"card-text quie\">Catégories</h6>
@@ -236,7 +236,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div> 
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les commentaires </div>
+                <div class=\"card-header cardName\">Statistique des commentaires </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/commentsA.jpg\">
                     <h6 class=\"card-text quie\">Commentaires</h6>
@@ -246,7 +246,7 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
         </div>    
         <div class=\"col-xs-12 col-sm-6 col-md-4\">
             <div class=\"card text-white bg-danger mb-3\" style=\"max-width: 20rem;\">
-                <div class=\"card-header cardName\">Statistiques de les messages </div>
+                <div class=\"card-header cardName\">Statistique des messages </div>
                 <div class=\"card-body\">
                     <img src=\"/imagesAdmin/messagesA.png\">
                     <h6 class=\"card-text quie\">Messages</h6>
@@ -265,6 +265,6 @@ class __TwigTemplate_0d5eb7485f246aed4cf9ade73350febfc214f104e23e199aa56788681f3
 {% endblock %}
 
 
-", "site/admin.html.twig", "C:\\Users\\utilisateur\\Desktop\\ForumDemo\\ForumDemo\\templates\\site\\admin.html.twig");
+", "site/admin.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\site\\admin.html.twig");
     }
 }

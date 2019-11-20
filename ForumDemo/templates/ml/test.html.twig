@@ -5,7 +5,9 @@
         <div class="container_register">
             <form method="post" enctype="multipart/form-data" action="" id="formulaire_register"
     style="width: 100%;">
-
+     <div class="h4ez">
+               <h1>Inscription</h1>
+                </div><br/><br/>
                 <label for="input_register">Nom d'utilisateur</label>
                     <input type="text" id="input_register" name="username" placeholder="Nom d'utilisateur">
                     <hr>
@@ -33,7 +35,7 @@
                      <label for="input_register">Code postal</label>
                     <input type="text" id="input_register" name="zipcode" placeholder="Code postal" required>
                     <hr>
-                     <label for="input_register">Mot de passe</label>
+                     <label for="input_register">Date de naissance</label>
                     <input type="date" id="input_register" max="2050-06-25" min="1900-08-13" name="birthday" required>
                     <hr>
                     <label for="input_register">Etes-vous inscrit à la mission local ?</label>
@@ -46,7 +48,7 @@
                     <input type="text" id="input_register" name="phone" placeholder="phone">
                     <hr>
                     <label for="input_register">Avatar ( Facultatif )</label>
-                    <input type="file" name="avatar" id="input_register">
+                    <input type="file" name="avatar" id="input_register"><br/>
                 <br />
                 <button type="submit" id="envoyer">M'inscrire</button>
             </form><br>
@@ -54,13 +56,18 @@
         </div>
     </div>
             <div id="container_co">
-                    <form method="post" action="" style="display:flex;">
-<input type="text" name="usernameco" id="input_login" placeholder="Nom d'utilisateur">
-<input type="password" name="passwordco" id="input_login" placeholder="Mot de passe"><br/>
-<button type="submit" id="envoyer_login">Confirmer</button>
-</form>
-<button id="button_select_choice" onclick="register()">S'inscrire</button>
+            <div class="h4ez">
+               <h1>Connexion</h1>
+                </div><br/><br/>
+
+                    <form method="post" action="" >
+<p class="h3ez">Nom d'utilisateur</p><input type="text" name="usernameco" id="input_login" placeholder="Nom d'utilisateur">
+<p class="h3ez">Mot de passe</p><input type="password" name="passwordco" id="input_login" placeholder="Mot de passe"><br/><br/><br/>
+<button type="submit" id="envoyer_login">Confirmer</button><br/><br/><br/>
+</form><br/>
+<button id="button_select_choice" onclick="register()">S'inscrire</button><br/><br/>
         </div>
+
         <div id="choice">
 <button id="button_select_choice" onclick="connexion()">Se connecter</button>
 <button id="button_select_choice" onclick="register()">S'inscrire</button>

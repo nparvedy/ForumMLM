@@ -27,13 +27,21 @@ class ProfilController extends AbstractController
      
      $session = new Session(new NativeSessionStorage(), new AttributeBag());
      if ($session->get('connected') == 'true') {
-     $user = $user_repo->find(1);
+          
+     $_POST['username'] = $session->get('pseudo');
+
+     $username = $_POST['username'];
+
+     $repoIduser = $this->getDoctrine()->getRepository(User::class);
+     $idUser = $repoIduser->findOneByUsername($username);
+     $user = $user_repo->find($idUser);
      $message=null;
      if(isset($_POST['annuler']))
          {
               return $this->render('profil/profil.html.twig', [
                   'user' => $user,
-                  'message' => $message
+                  'message' => $message,
+                  'id' => $idUser
 
 
             ]);
@@ -58,7 +66,8 @@ class ProfilController extends AbstractController
 
               return $this->render('profil/profil.html.twig', [
                   'user' => $user,
-                  'message' => $message
+                  'message' => $message,
+                  'id' => $idUser
 
 
             ]);}
@@ -68,7 +77,8 @@ class ProfilController extends AbstractController
               // code...
               return $this->render('profil/profil.html.twig', [
                    'user' => $user,
-                   'message' => $message
+                   'message' => $message,
+                   'id' => $idUser
 
               ]);
          }

@@ -322,6 +322,6 @@ class __TwigTemplate_5b001b92037acdaf570fbd3b46fbae750d07be962b458efc6b8800d5421
 {% endblock %}
 
 
-", "site/searchArticle.html.twig", "C:\\Users\\Sènzo\\Desktop\\POPODEPIED\\ForumDemo\\ForumDemo\\templates\\site\\searchArticle.html.twig");
+", "site/searchArticle.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\site\\searchArticle.html.twig");
     }
 }

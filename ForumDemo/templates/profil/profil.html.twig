@@ -6,17 +6,18 @@
      <div class="message-succes">
           <p>{{message}}</p>
      </div>
-{% endif %}
-     <h2>Profil utilisateur</h2>
+{% endif %}<br/><br/><br/><br/><br/><br/><br/><br/>
 
     <div class="profilrow">
          <div class="colone-40">
-              <h4>{{user.username}}</h4>
-              <img src="{{user.avatar}}" alt="">
+              <h2 class="h3ez">Profil utilisateur</h2>
+
+              <h4 class="h3ez">Utilisateur : {{user.username}}</h4>
+              <img class="imgUser" src="{{user.avatar}}" alt="">
               <button id="upload" type="submit">Changer l'avatar</button>
-              <h5> <span>inscrit depuis :</span> {{user.createdAT |date('d/m/Y')}}</h5>
+              <h5 ><span>inscrit depuis :</span> {{user.createdAT |date('d/m/Y')}}</h5>
               {% if user.candidat == 1 %}
-               <h3>Candidat dans la mission locale marseille</h3>
+               <h3 class="h3ez">Candidat dans la mission locale marseille</h3>
                {% endif %}
   
   
@@ -26,7 +27,7 @@
 
               <form class="" action="" method="post">
 
-                   <label for="">Pseudo</label>
+                   <label for="">Nom d'utilisateur</label>
                    <input class="inprof" type="text" minlength=6 maxlength=35 name="username" value="{{user.username}}" required>
 
                    <label for="">Nom</label>

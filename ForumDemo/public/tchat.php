@@ -4,7 +4,7 @@
 // on récupère les 10 derniers messages postés  
         $request = $bdd->query('SELECT * FROM section');
         $request->fetch();?>
-<a id="tchat_li" href="?id=1" class="tchat1"><h3>Général</h3></a>
+<a id="tchat_li" href="?id=9" class="tchat1"><h3>Général</h3></a>
    <?php
 $var = 0;
 

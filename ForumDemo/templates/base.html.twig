@@ -14,26 +14,24 @@
     <body>
                 <div id="menu_responsive">
                 <div class="categorie" id="cat">
-                    <a href="/"><li class="li_menu">ACCUEIL</li></a>
-                    <li class="li_menu" >CONTACT</li>
-                    <li class="li_menu">COMPTE</li>
-                    <li class="li_menu" >Recherche</li>
+                <a href="/" class="li_menu"><li >ACCUEIL</li></a>
+                <a href="{{path('profil_show',{'id':2})}}" class="li_menu"><li>COMPTE</li></a>
+                <a class="li_menu"><li class="active">RECHERCHER</li></a>
+                <a  href="{{ path('deconnection')}}" class="li_menu"><li>DECONNECTION</li></a>
+
                     
                 </div>
             </div>
-       <header>
+       <header style="z-index:99">
         <div id="container">
         
             <a href="/"><img height="100" id="logo_website" src="/images/logo.png" alt="logo"
                     width="200" /></a>
             <div id="li_container">
                 <a href="/"><li id="home_icon"></li></a>
-                {% if user is defined %}
-                <a href="{{path('profil_show', {'id': user.id})}}"><li id="users_icon"> </li></a>
+                <a href="{{path('profil_show',{'id':2})}}"><li id="users_icon"> </li></a>
                 <a  href="{{ path('deconnection')}}"><li id="deco_icon"></li></a>
-                {% endif %}
                 <li class="active" id="search_icon"></li>
-                
             </div>
 
                   <div id="li_container_responsive">

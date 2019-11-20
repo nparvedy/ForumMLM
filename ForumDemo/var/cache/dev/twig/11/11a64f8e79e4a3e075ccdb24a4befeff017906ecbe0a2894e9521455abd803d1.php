@@ -68,36 +68,36 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
     <body>
                 <div id=\"menu_responsive\">
                 <div class=\"categorie\" id=\"cat\">
-                    <a href=\"/\"><li class=\"li_menu\">ACCUEIL</li></a>
-                    <li class=\"li_menu\" >CONTACT</li>
-                    <li class=\"li_menu\">COMPTE</li>
-                    <li class=\"li_menu\" >Recherche</li>
+                <a href=\"/\" class=\"li_menu\"><li >ACCUEIL</li></a>
+                <a href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_show", ["id" => 2]);
+        echo "\" class=\"li_menu\"><li>COMPTE</li></a>
+                <a class=\"li_menu\"><li class=\"active\">RECHERCHER</li></a>
+                <a  href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deconnection");
+        echo "\" class=\"li_menu\"><li>DECONNECTION</li></a>
+
                     
                 </div>
             </div>
-       <header>
+       <header style=\"z-index:99\">
         <div id=\"container\">
         
             <a href=\"/\"><img height=\"100\" id=\"logo_website\" src=\"/images/logo.png\" alt=\"logo\"
                     width=\"200\" /></a>
             <div id=\"li_container\">
                 <a href=\"/\"><li id=\"home_icon\"></li></a>
-                ";
-        // line 31
-        if ((isset($context["user"]) || array_key_exists("user", $context))) {
-            // line 32
-            echo "                <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 32, $this->source); })()), "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\"><li id=\"users_icon\"> </li></a>
+                <a href=\"";
+        // line 32
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_show", ["id" => 2]);
+        echo "\"><li id=\"users_icon\"> </li></a>
                 <a  href=\"";
-            // line 33
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deconnection");
-            echo "\"><li id=\"deco_icon\"></li></a>
-                ";
-        }
-        // line 35
-        echo "                <li class=\"active\" id=\"search_icon\"></li>
-                
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deconnection");
+        echo "\"><li id=\"deco_icon\"></li></a>
+                <li class=\"active\" id=\"search_icon\"></li>
             </div>
 
                   <div id=\"li_container_responsive\">
@@ -110,7 +110,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
     </header>
     <div class=\"serachbox\">
                         <form name=\"myForm\" id=\"recherche\" action=\"";
-        // line 48
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recup");
         echo "\" method=\"post\">
                             <input id=\"message\" type=\"text\" name=\"recherche\" placeholder=\"Rechercher\">
@@ -122,9 +122,9 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
             <div class=\"flexage\" id=\"flexage\">
      </div>
         ";
-        // line 57
+        // line 55
         $this->displayBlock('body', $context, $blocks);
-        // line 60
+        // line 58
         echo " </div>
     <!-- Pied de page du Forum -->
     <footer>
@@ -145,21 +145,21 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
 
         ";
-        // line 79
+        // line 77
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 82
+        // line 80
         echo "
  ";
-        // line 83
+        // line 81
         $this->displayBlock('javascriptzz', $context, $blocks);
-        // line 86
+        // line 84
         echo "
 
 
 ";
-        // line 89
+        // line 87
         $this->displayBlock('js', $context, $blocks);
-        // line 121
+        // line 119
         echo "    </body>
 </html>
 <script src=\"../app.js\"></script>
@@ -211,7 +211,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
     }
 
-    // line 57
+    // line 55
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -221,7 +221,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 58
+        // line 56
         echo "       
         ";
         
@@ -232,7 +232,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
     }
 
-    // line 79
+    // line 77
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -242,7 +242,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 80
+        // line 78
         echo "
         ";
         
@@ -253,7 +253,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
     }
 
-    // line 83
+    // line 81
     public function block_javascriptzz($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -263,7 +263,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascriptzz"));
 
-        // line 84
+        // line 82
         echo "    
 ";
         
@@ -274,7 +274,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
     }
 
-    // line 89
+    // line 87
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -284,7 +284,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 90
+        // line 88
         echo "        <script>
         //Document GET//
         bouton = document.getElementById('container_barre');
@@ -336,7 +336,7 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 
     public function getDebugInfo()
     {
-        return array (  288 => 90,  278 => 89,  267 => 84,  257 => 83,  246 => 80,  236 => 79,  225 => 58,  215 => 57,  197 => 12,  178 => 5,  163 => 121,  161 => 89,  156 => 86,  154 => 83,  151 => 82,  149 => 79,  128 => 60,  126 => 57,  114 => 48,  99 => 35,  94 => 33,  89 => 32,  87 => 31,  67 => 13,  65 => 12,  55 => 5,  49 => 1,);
+        return array (  288 => 88,  278 => 87,  267 => 82,  257 => 81,  246 => 78,  236 => 77,  225 => 56,  215 => 55,  197 => 12,  178 => 5,  163 => 119,  161 => 87,  156 => 84,  154 => 81,  151 => 80,  149 => 77,  128 => 58,  126 => 55,  114 => 46,  98 => 33,  94 => 32,  79 => 20,  74 => 18,  67 => 13,  65 => 12,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -357,26 +357,24 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
     <body>
                 <div id=\"menu_responsive\">
                 <div class=\"categorie\" id=\"cat\">
-                    <a href=\"/\"><li class=\"li_menu\">ACCUEIL</li></a>
-                    <li class=\"li_menu\" >CONTACT</li>
-                    <li class=\"li_menu\">COMPTE</li>
-                    <li class=\"li_menu\" >Recherche</li>
+                <a href=\"/\" class=\"li_menu\"><li >ACCUEIL</li></a>
+                <a href=\"{{path('profil_show',{'id':2})}}\" class=\"li_menu\"><li>COMPTE</li></a>
+                <a class=\"li_menu\"><li class=\"active\">RECHERCHER</li></a>
+                <a  href=\"{{ path('deconnection')}}\" class=\"li_menu\"><li>DECONNECTION</li></a>
+
                     
                 </div>
             </div>
-       <header>
+       <header style=\"z-index:99\">
         <div id=\"container\">
         
             <a href=\"/\"><img height=\"100\" id=\"logo_website\" src=\"/images/logo.png\" alt=\"logo\"
                     width=\"200\" /></a>
             <div id=\"li_container\">
                 <a href=\"/\"><li id=\"home_icon\"></li></a>
-                {% if user is defined %}
-                <a href=\"{{path('profil_show', {'id': user.id})}}\"><li id=\"users_icon\"> </li></a>
+                <a href=\"{{path('profil_show',{'id':2})}}\"><li id=\"users_icon\"> </li></a>
                 <a  href=\"{{ path('deconnection')}}\"><li id=\"deco_icon\"></li></a>
-                {% endif %}
                 <li class=\"active\" id=\"search_icon\"></li>
-                
             </div>
 
                   <div id=\"li_container_responsive\">
@@ -466,6 +464,6 @@ class __TwigTemplate_56e5bb95fffd04f0ad1a983e9daa1c041536a7c4587c001c2dc3d76f7f5
 <script src=\"../app.js\"></script>
 
 <style>
-</style>", "base.html.twig", "C:\\Users\\utilisateur\\Desktop\\ForumDemo\\ForumDemo\\templates\\base.html.twig");
+</style>", "base.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\base.html.twig");
     }
 }

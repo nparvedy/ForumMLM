@@ -57,5 +57,36 @@ class CommentRepository extends ServiceEntityRepository
         return $stmt->fetchAll();  
     }
 
+  // supprimer une commentaire 
+  public function deleteCA($idC)
+  {
+      $rawSql = "delete  FROM `comment` where id='$idC'";
+
+      $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
+      $stmt->execute([]);
+  
+      
+  }
+  // supprimer tous les commentaires qui attachent avec un utilisateur
+  public function deleteAllCommentsAU($id)
+  {
+      $rawSql = "delete  FROM `comment` where user_id='$id'";
+
+      $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
+      $stmt->execute([]);
+  
+      
+  }   
+  // supprimer tous les commentaires qui attachent avec un article
+  public function deleteAllCommentsAA($id)
+  {
+      $rawSql = "delete  FROM `comment` where article_id='$id'";
+
+      $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
+      $stmt->execute([]);
+  
+      
+  }   
+
 
 }

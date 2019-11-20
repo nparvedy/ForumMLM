@@ -188,11 +188,11 @@ class __TwigTemplate_01cbd2d938c4ce23cea3088777ec4785e2f04e23ee7997b8745841dd31a
                 <input type=\"text\" id=\"username\"value=\"";
             // line 80
             echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new RuntimeError('Variable "username" does not exist.', 80, $this->source); })()), "html", null, true);
-            echo "\">
+            echo "\" hidden>
                 <input type=\"text\" id=\"idid\" value=\"";
             // line 81
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["idUser"]) || array_key_exists("idUser", $context) ? $context["idUser"] : (function () { throw new RuntimeError('Variable "idUser" does not exist.', 81, $this->source); })()), "id", [], "any", false, false, false, 81), "html", null, true);
-            echo "\" >
+            echo "\" hidden>
             </div>
         </div>
         </a>
@@ -388,8 +388,8 @@ cc();
             </div>
             <div id=\"postit\">
                 <p>{{ article.content }}</p>
-                <input type=\"text\" id=\"username\"value=\"{{ username }}\">
-                <input type=\"text\" id=\"idid\" value=\"{{ idUser.id }}\" >
+                <input type=\"text\" id=\"username\"value=\"{{ username }}\" hidden>
+                <input type=\"text\" id=\"idid\" value=\"{{ idUser.id }}\" hidden>
             </div>
         </div>
         </a>
@@ -475,6 +475,6 @@ cc();
         }
     }, 500);
 </script>
-{% endblock %}", "ml/index.html.twig", "C:\\Users\\utilisateur\\Desktop\\ForumDemo\\ForumDemo\\templates\\ml\\index.html.twig");
+{% endblock %}", "ml/index.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\ml\\index.html.twig");
     }
 }

@@ -269,6 +269,7 @@ a {
 }
 
 header {
+    
     background-color: #374771;
     width: 100%;
     height: 100px;
@@ -527,12 +528,14 @@ footer>#footer_container>#column>h2 {
 }
 
 #container_co {
+    margin:0 auto;
+    text-align:center;
     width: 100%;
-    padding: 10px;
+    height:auto;
     background-color: white;
-    margin-top: 200px;
-    border: 1px solid #d0c3c3;
-    display: none;
+    margin-top: 190px;
+    border: 1px solid #d0c3c3d3;
+    display:none;
 }
 
 #logo_pn {
@@ -609,16 +612,23 @@ footer>#footer_container>#column>h2 {
 }
 
 #button_select_choice {
-    padding: 20px;
+    padding: 25px;
     width: 100%;
     background-color: #374771;
     color: white;
-    font-size: 15px;
+    border:1px solid rgb(16, 5, 70);
+    font-size: 20px;
     height: 67px;
     border: 0px solid black;
     font-weight: bolder;
     margin-right: 5px;
+    transition:0.5s;
+    cursor:pointer;
     box-shadow: 0px 2px 0px #24304d;
+}
+#button_select_choice:hover {
+    background-color: #445ea0;
+transition:0.5s;
 }
 
 #choice {
@@ -806,30 +816,40 @@ select {
 
 #input_login {
     padding: 20px;
-    width: 98%;
+    width: 50%;
     height: 25px;
-    box-shadow: 0px 2px 0px #232e4b;
-    border: 1px solid black;
-    margin-bottom: 10px;
+    text-align:center;
+    margin-top:10px;
+    box-shadow: 0px 0.8px 0px #232e4bb2;
+    border-radius: 1px solid rgba(0, 0, 0, 0.644);
+    
 }
 
 #envoyer_login {
     background-color: #627dc4;
     color: white;
-    border: 0px solid black;
+    border-radius: 0px solid rgba(36, 78, 194, 0.555);
     box-shadow: 0px 2px 0px #374771;
     width: 30%;
+    cursor:pointer;
+    font-size:20px;
     height: 67px;
     padding: 20px;
+    transition:0.5s;
+margin-top:10px;
+}
+#envoyer_login:hover {
+    transition:0.5s;
+    background-color: #7293e6;
 }
 
 #input_register {
-    width: 95%;
-    padding: 15px;
-    border: 1px solid black;
-    box-shadow: 0px 2px 0px black;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    width: 96%;
+    height: 30px;
+    text-align:center;
+    margin-top:10px;
+    box-shadow: 0px 0.8px 0px #232e4bb2;
+    border: 1px solid rgba(0, 0, 0, 0.644);
 }
 
 #envoyer {
@@ -837,9 +857,14 @@ select {
     color: white;
     border: 0px solid black;
     border-radius: 3px;
+    font-size:20px;
+    cursor:pointer;
     box-shadow: 0px 2px 0px #4b5c8b;
     padding: 30px;
     width: 100%;
+}
+#envoyer:hover {
+    background-color: #7593e6;
 }
 
 label {

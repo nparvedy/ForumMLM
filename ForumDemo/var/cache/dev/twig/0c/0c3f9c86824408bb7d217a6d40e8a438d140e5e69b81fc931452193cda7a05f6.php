@@ -91,7 +91,7 @@ class __TwigTemplate_0e83ee1e6a7e7b98d50c4a85c6b4baa25923d5cccccd9c04b4c64f3f581
 <section class=\"article\">
     <div class=\"profil\">
         <ul>
-            <li class=\"avatar\"><img src=\"/article/images/";
+            <li class=\"avatar\"><img src=\"";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "avatar", [], "any", false, false, false, 11), "html", null, true);
         echo "\"/></li>
@@ -247,7 +247,7 @@ class __TwigTemplate_0e83ee1e6a7e7b98d50c4a85c6b4baa25923d5cccccd9c04b4c64f3f581
 <section class=\"article\">
     <div class=\"profil\">
         <ul>
-            <li class=\"avatar\"><img src=\"/article/images/{{ article.user.avatar }}\"/></li>
+            <li class=\"avatar\"><img src=\"{{ article.user.avatar }}\"/></li>
             <li class=\"username\">{{ article.user.username }}</li>
             <li class=\"nb_message\">31 message</li>
         </ul>
@@ -307,6 +307,6 @@ class __TwigTemplate_0e83ee1e6a7e7b98d50c4a85c6b4baa25923d5cccccd9c04b4c64f3f581
 {% endfor %}
 {{ knp_pagination_render(comments) }}
 
-{% endblock %}", "article/show.html.twig", "C:\\Users\\utilisateur\\Desktop\\ForumDemo\\ForumDemo\\templates\\article\\show.html.twig");
+{% endblock %}", "article/show.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\article\\show.html.twig");
     }
 }

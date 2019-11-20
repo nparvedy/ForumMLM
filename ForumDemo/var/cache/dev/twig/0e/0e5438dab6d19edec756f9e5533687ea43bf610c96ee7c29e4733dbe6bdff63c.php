@@ -70,7 +70,9 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
         <div class=\"container_register\">
             <form method=\"post\" enctype=\"multipart/form-data\" action=\"\" id=\"formulaire_register\"
     style=\"width: 100%;\">
-
+     <div class=\"h4ez\">
+               <h1>Inscription</h1>
+                </div><br/><br/>
                 <label for=\"input_register\">Nom d'utilisateur</label>
                     <input type=\"text\" id=\"input_register\" name=\"username\" placeholder=\"Nom d'utilisateur\">
                     <hr>
@@ -98,7 +100,7 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
                      <label for=\"input_register\">Code postal</label>
                     <input type=\"text\" id=\"input_register\" name=\"zipcode\" placeholder=\"Code postal\" required>
                     <hr>
-                     <label for=\"input_register\">Mot de passe</label>
+                     <label for=\"input_register\">Date de naissance</label>
                     <input type=\"date\" id=\"input_register\" max=\"2050-06-25\" min=\"1900-08-13\" name=\"birthday\" required>
                     <hr>
                     <label for=\"input_register\">Etes-vous inscrit à la mission local ?</label>
@@ -111,7 +113,7 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
                     <input type=\"text\" id=\"input_register\" name=\"phone\" placeholder=\"phone\">
                     <hr>
                     <label for=\"input_register\">Avatar ( Facultatif )</label>
-                    <input type=\"file\" name=\"avatar\" id=\"input_register\">
+                    <input type=\"file\" name=\"avatar\" id=\"input_register\"><br/>
                 <br />
                 <button type=\"submit\" id=\"envoyer\">M'inscrire</button>
             </form><br>
@@ -119,36 +121,41 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
         </div>
     </div>
             <div id=\"container_co\">
-                    <form method=\"post\" action=\"\" style=\"display:flex;\">
-<input type=\"text\" name=\"usernameco\" id=\"input_login\" placeholder=\"Nom d'utilisateur\">
-<input type=\"password\" name=\"passwordco\" id=\"input_login\" placeholder=\"Mot de passe\"><br/>
-<button type=\"submit\" id=\"envoyer_login\">Confirmer</button>
-</form>
-<button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button>
+            <div class=\"h4ez\">
+               <h1>Connexion</h1>
+                </div><br/><br/>
+
+                    <form method=\"post\" action=\"\" >
+<p class=\"h3ez\">Nom d'utilisateur</p><input type=\"text\" name=\"usernameco\" id=\"input_login\" placeholder=\"Nom d'utilisateur\">
+<p class=\"h3ez\">Mot de passe</p><input type=\"password\" name=\"passwordco\" id=\"input_login\" placeholder=\"Mot de passe\"><br/><br/><br/>
+<button type=\"submit\" id=\"envoyer_login\">Confirmer</button><br/><br/><br/>
+</form><br/>
+<button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button><br/><br/>
         </div>
+
         <div id=\"choice\">
 <button id=\"button_select_choice\" onclick=\"connexion()\">Se connecter</button>
 <button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button>
 </div>
         ";
-        // line 68
-        if ((isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 68, $this->source); })())) {
-            // line 69
+        // line 75
+        if ((isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 75, $this->source); })())) {
+            // line 76
             echo "<div id=\"succes\"><p>";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 69, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 76, $this->source); })()), "html", null, true);
             echo "</p></div>
 ";
         }
-        // line 71
+        // line 78
         echo "        ";
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 71, $this->source); })())) {
-            // line 72
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 78, $this->source); })())) {
+            // line 79
             echo "<div id=\"error\"><p>";
-            echo twig_escape_filter($this->env, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 72, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 79, $this->source); })()), "html", null, true);
             echo "</p></div>
 ";
         }
-        // line 74
+        // line 81
         echo "</main>
 
 
@@ -164,7 +171,7 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
 
     }
 
-    // line 82
+    // line 89
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -174,7 +181,7 @@ class __TwigTemplate_8f0b521b85422d7020e157c32cda1dd0c28771af5064019ae37d1757445
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 83
+        // line 90
         echo "  <script type=\"text/javascript\">
     function connexion() {
          var connexion = document.getElementById('container_co');
@@ -228,7 +235,7 @@ setTimeout(timeco, 5000);
 
     public function getDebugInfo()
     {
-        return array (  178 => 83,  168 => 82,  152 => 74,  146 => 72,  143 => 71,  137 => 69,  135 => 68,  59 => 3,  36 => 1,);
+        return array (  185 => 90,  175 => 89,  159 => 81,  153 => 79,  150 => 78,  144 => 76,  142 => 75,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -240,7 +247,9 @@ setTimeout(timeco, 5000);
         <div class=\"container_register\">
             <form method=\"post\" enctype=\"multipart/form-data\" action=\"\" id=\"formulaire_register\"
     style=\"width: 100%;\">
-
+     <div class=\"h4ez\">
+               <h1>Inscription</h1>
+                </div><br/><br/>
                 <label for=\"input_register\">Nom d'utilisateur</label>
                     <input type=\"text\" id=\"input_register\" name=\"username\" placeholder=\"Nom d'utilisateur\">
                     <hr>
@@ -268,7 +277,7 @@ setTimeout(timeco, 5000);
                      <label for=\"input_register\">Code postal</label>
                     <input type=\"text\" id=\"input_register\" name=\"zipcode\" placeholder=\"Code postal\" required>
                     <hr>
-                     <label for=\"input_register\">Mot de passe</label>
+                     <label for=\"input_register\">Date de naissance</label>
                     <input type=\"date\" id=\"input_register\" max=\"2050-06-25\" min=\"1900-08-13\" name=\"birthday\" required>
                     <hr>
                     <label for=\"input_register\">Etes-vous inscrit à la mission local ?</label>
@@ -281,7 +290,7 @@ setTimeout(timeco, 5000);
                     <input type=\"text\" id=\"input_register\" name=\"phone\" placeholder=\"phone\">
                     <hr>
                     <label for=\"input_register\">Avatar ( Facultatif )</label>
-                    <input type=\"file\" name=\"avatar\" id=\"input_register\">
+                    <input type=\"file\" name=\"avatar\" id=\"input_register\"><br/>
                 <br />
                 <button type=\"submit\" id=\"envoyer\">M'inscrire</button>
             </form><br>
@@ -289,13 +298,18 @@ setTimeout(timeco, 5000);
         </div>
     </div>
             <div id=\"container_co\">
-                    <form method=\"post\" action=\"\" style=\"display:flex;\">
-<input type=\"text\" name=\"usernameco\" id=\"input_login\" placeholder=\"Nom d'utilisateur\">
-<input type=\"password\" name=\"passwordco\" id=\"input_login\" placeholder=\"Mot de passe\"><br/>
-<button type=\"submit\" id=\"envoyer_login\">Confirmer</button>
-</form>
-<button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button>
+            <div class=\"h4ez\">
+               <h1>Connexion</h1>
+                </div><br/><br/>
+
+                    <form method=\"post\" action=\"\" >
+<p class=\"h3ez\">Nom d'utilisateur</p><input type=\"text\" name=\"usernameco\" id=\"input_login\" placeholder=\"Nom d'utilisateur\">
+<p class=\"h3ez\">Mot de passe</p><input type=\"password\" name=\"passwordco\" id=\"input_login\" placeholder=\"Mot de passe\"><br/><br/><br/>
+<button type=\"submit\" id=\"envoyer_login\">Confirmer</button><br/><br/><br/>
+</form><br/>
+<button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button><br/><br/>
         </div>
+
         <div id=\"choice\">
 <button id=\"button_select_choice\" onclick=\"connexion()\">Se connecter</button>
 <button id=\"button_select_choice\" onclick=\"register()\">S'inscrire</button>
@@ -347,6 +361,6 @@ setTimeout(timeco, 5000);
 
 setTimeout(timeco, 5000);
     </script>
-  {% endblock %}", "ml/test.html.twig", "C:\\Users\\utilisateur\\Desktop\\ForumDemo\\ForumDemo\\templates\\ml\\test.html.twig");
+  {% endblock %}", "ml/test.html.twig", "C:\\Users\\utilisateur\\Desktop\\BonVersion\\ForumDemo\\templates\\ml\\test.html.twig");
     }
 }
